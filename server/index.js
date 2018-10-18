@@ -29,6 +29,9 @@ app.use(
     })
 );
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // pass app value to authroute handler
 authRoutes(app);

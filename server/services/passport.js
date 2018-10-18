@@ -36,7 +36,8 @@ passport.use(
                             .then(user => done(null, user));
                     }
 
-                });
+                }
+            );
         }
     )   
 );
