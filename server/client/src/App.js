@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Yeetmail
           </p>
           <a
             className="App-link"
@@ -19,6 +19,7 @@ class App extends Component {
           >
             Learn React
           </a>
+          <a href="/auth/google">Sign in with Google</a>
         </header>
       </div>
     );
