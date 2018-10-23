@@ -8,10 +8,10 @@ const Landing = () => <h2>Landing</h2>
 
 const App = () => {
     return (
-        <div>
+        <div className="container">
             <BrowserRouter>
                 <div>
-                    <Route path="/" component={Header} />
+                    <Header />
                     <Route exact path="/" component={Landing} />
                     <Route exact path="/accounts" component={Dashboard} />
                     <Route path="/accounts/new" component={AccountNew} />
