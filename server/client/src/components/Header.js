@@ -4,7 +4,12 @@ import { connect } from 'react-redux';
 class Header extends Component {
   renderContent(){
     switch (this.props.auth){
-        
+      case null:
+        return 'Still deciding';
+      case false:
+        return 'im logged out';
+      default:
+        return 'im logged in';
     }
   }
 
@@ -14,8 +19,8 @@ class Header extends Component {
         <nav>
           <div className="nav-wrapper grey darken-4">
             <a href="/" className="left brand-logo"> Yeet</a>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li><a href="/auth/google">Login With Google</a></li>
+            <ul id="nav-mobile" className="right">
+              <li>{this.renderContent()}</li>
             </ul>
           </div>
         </nav>

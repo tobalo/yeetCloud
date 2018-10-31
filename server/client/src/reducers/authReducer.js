@@ -1,4 +1,4 @@
-import { FETCH_USER } from '../actions/types'
+import { FETCH_USER } from '../actions/types';
 
 export default function(state = null, action){
 
@@ -10,4 +10,4 @@ export default function(state = null, action){
         default:
             return state;
     }
-}
+};
