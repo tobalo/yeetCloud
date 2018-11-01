@@ -9,7 +9,7 @@ class Header extends Component {
       case false:
         return 'im logged out';
       default:
-        return 'im logged in';
+        return 'yeet' || <a href='/auth/google'> Login with google</a>;
     }
   }
 
