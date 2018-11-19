@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
+const cors = require('cors');
 require('./models/user');
 require('./services/passport');
 
@@ -22,11 +23,7 @@ mongoose.connect(keys.mongoURI, {
 
 const app = express();
 
-app.use((req,res,next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+app.use(cors());
 
 app.use(
     cookieSession({
