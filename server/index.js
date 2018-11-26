@@ -11,8 +11,8 @@ require('./services/passport');
 
 // connect to DB
 mongoose.connect(keys.mongoURI, {
-    useNewUrlParser: true}, 
-    function(err){
+    useNewUrlParser: true},
+    err => {
         if (!err){
             console.log("Database connected...")
         } else {
