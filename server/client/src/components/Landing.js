@@ -4,8 +4,9 @@ class Landing extends Component {
 
     render(){
         return (
-            <div>
-                <h2>Welcome to yeet landing</h2>
+            <div style={{ textAlign: 'center'}}>
+                <h1>Yeet</h1>
+                <h2>Optimize your Digital Marketing Strategy</h2>
             </div>
 
         );

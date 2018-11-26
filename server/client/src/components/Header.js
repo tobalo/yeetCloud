@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import { connect } from 'react-redux';
 
 class Header extends Component {
-  renderContent(){
+  renderContent() {
     switch (this.props.auth){
       case null:
         return;
@@ -17,7 +17,7 @@ class Header extends Component {
     }
   }
 
-    render(){
+    render() {
       console.log(this.props);
       return (
         <nav>
@@ -32,7 +32,7 @@ class Header extends Component {
     }
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return { auth: state.auth };
 }
 
