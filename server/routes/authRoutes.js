@@ -11,14 +11,14 @@ module.exports = app => {
 
     app.get('/auth/google/callback', 
     passport.authenticate('google'), 
-    (req, res) => {
+    (req, res, next) => {
         res.redirect('/accounts');
     });
     
-    app.get('/auth/logout', (req, res) => {
+    app.get('/auth/logout', (req, res, next) => {
         req.logout();
         res.redirect('/');
-        res.send(req.user);
+        next();
     });
 
     app.get('/auth/user', (req, res) => {
