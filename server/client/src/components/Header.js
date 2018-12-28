@@ -14,8 +14,8 @@ class Header extends Component {
           );
       default:
         return [
-          <li><Payments/></li>,
-          <li><a href='/auth/logout'>Log Out</a></li>
+          <li key="1"><Payments/></li>,
+          <li key="2"><a href='/auth/logout'>Log Out</a></li>
         ];
     }
   }
@@ -25,7 +25,7 @@ class Header extends Component {
       return (
         <nav>
           <div className="nav-wrapper grey darken-4">
-            <Link to={this.props.auth ? '/accounts' : '/'} className="left brand-logo"> Yeetel</Link>
+            <Link to={this.props.auth ? '/accounts' : '/'} className="left brand-logo"> Yeet Cloud</Link>
             <ul id="nav-mobile" className="right">
               {this.renderContent()}
             </ul>
