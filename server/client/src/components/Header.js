@@ -23,7 +23,7 @@ class Header extends Component {
       return (
         <nav>
           <div className="nav-wrapper grey darken-4">
-            <Link to={this.props.auth ? '/accounts' : '/'} className="left brand-logo"> Yeet</Link>
+            <Link to={this.props.auth ? '/accounts' : '/'} className="left brand-logo"> Yeetel</Link>
             <ul id="nav-mobile" className="right">
               <li>{this.renderContent()}</li>
             </ul>
